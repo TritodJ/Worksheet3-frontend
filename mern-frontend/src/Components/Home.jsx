@@ -1,6 +1,6 @@
 import React from 'react';
-import About from './About';
-import Service from './Service';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
+
 
 const Home = () => {
     return (
@@ -11,11 +11,11 @@ const Home = () => {
                         <div className="col-md-8 mt-5">
                             <h1 className="display-4 fw-bolder mb-4 text-center">Welcome to Book Web: Where Stories Come to Life</h1>
                             <p className="lead text-center fs-4 mb-5">Chapter & Verse: Your Literary Journey Starts Here</p>
-                            <div className="buttons">
-                                <button className="btn btn-;ight me-4 rounded-pill px-4 py-2">Add Book</button>
-                                <button className="btn btn-;ight me-4 rounded-pill px-4 py-2">Book List</button>
-                                <button className="btn btn-;ight me-4 rounded-pill px-4 py-2">Book's Record</button>
-                                <button className="btn btn-;ight me-4 rounded-pill px-4 py-2">Add Book</button>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <NavLink className="btn btn-outline-success ms-2 px-4 rounded-pill btn-lg btn-block " to="/addbook">Add Book</NavLink>
+                                <NavLink className="btn btn-outline-success ms-2 px-4 rounded-pill btn-lg btn-block" to="/booklist">Book List</NavLink>
+                                <NavLink className="btn btn-outline-success ms-2 px-4 rounded-pill btn-lg btn-block" to="/bookrecord">Book's Record</NavLink>
+                                <NavLink className="btn btn-outline-success ms-2 px-4 rounded-pill btn-lg btn-block" to="/editbook">Edit Book</NavLink>
                             </div>
                         </div>
                     </div>
